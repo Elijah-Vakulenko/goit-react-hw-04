@@ -28,7 +28,7 @@ const ImageModal = ({ image, isOpen, onRequestClose }) => {
         style={customStyles}
         isOpen={isOpen}
         onRequestClose={onRequestClose}
-        overlayClassName={css.overlays}
+        overlayClassName={s.overlays}
         contentLabel="Image Modal"
         appElement={document.getElementById("root")}
       >
