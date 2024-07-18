@@ -50,7 +50,7 @@ function App() {
     setPage(1);
   };
 
-  const handleMoreImages = async () => {
+  const addMoreImages = async () => {
     setPage((prevPage) => prevPage + 1);
   };
 
@@ -65,12 +65,12 @@ function App() {
   };
 
   return (
-    <div className={css.container}>
+    <div className={s.container}>
       <SearchBar onSubmit={onSetSearchQuery} />
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
       {images && <ImageGallery images={images} onImageClick={openModal} />}
-      {images && <LoadMoreBtn onClick={handleMoreImages} />}
+      {images && <LoadMoreBtn onClick={addMoreImages} />}
       <ImageModal
         isOpen={!!selectedImage}
         image={selectedImage}
