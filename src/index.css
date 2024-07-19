@@ -4,15 +4,14 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #F5F0D2;
-  background-color: #7468B0;
+  color: #f5f0d2;
+  background-color: #7468b0;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 a {
   font-weight: 500;
@@ -51,8 +50,8 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #F5F0D2;
-    background-color: #7468B0;
+    color: #f5f0d2;
+    background-color: #7468b0;
   }
   a:hover {
     color: #747bff;
@@ -108,7 +107,7 @@ textarea {
 }
 
 .container {
-  min-width: 320px;
+  max-width: 300px;
   width: 100%;
   padding: 0 20px;
   margin: 0 auto;
@@ -128,5 +127,6 @@ textarea {
 
 @media screen and (min-width: 1440px) {
   .container {
-    max-width: 1440px;
+    max-width: 100%;
   }
+}

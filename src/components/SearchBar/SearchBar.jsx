@@ -1,5 +1,5 @@
-import { useState } from "react";
 import s from "./SearchBar.module.css";
+import { useState } from "react";
 import { Toaster } from "react-hot-toast";
 import { showError } from "../../services/toaster";
 import { FaSearch } from 'react-icons/fa';

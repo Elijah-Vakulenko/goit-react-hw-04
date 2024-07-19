@@ -1,2 +1,21 @@
 .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* расстояние между карточками */
+}
+
+.gallery-item {
+  flex: 1 1 calc(100% - 15px); /* По умолчанию одна картинка */
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-item {
+    flex: 1 1 calc((100% - 45px) / 3); /* Три картинки */
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .gallery-item {
+    flex: 1 1 calc((100% - 60px) / 4); /* Четыре картинки */
+  }
 }
