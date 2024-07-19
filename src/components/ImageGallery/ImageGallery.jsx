@@ -4,7 +4,7 @@ import s from "./ImageGallery.module.css";
 
 const ImageGallery = (images, onImageClick) => {
   return (
-     <div className={s.container}>
+     <div className="container">
       <ul className={s.gallery}>
         {Array.isArray(images) &&
           images.map((image) => (

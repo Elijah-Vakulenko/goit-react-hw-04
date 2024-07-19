@@ -2,6 +2,7 @@ import { useState } from "react";
 import s from "./SearchBar.module.css";
 import { Toaster } from "react-hot-toast";
 import { showError } from "../../services/toaster";
+import { FaSearch } from 'react-icons/fa';
 
 const SearchBar = ({ onSubmit }) => {
   const [topic, setTopic] = useState("");
@@ -22,7 +23,8 @@ const SearchBar = ({ onSubmit }) => {
 
   return (
     <header className={s.searchbar}>
-      <form className={s.searchForm} onSubmit={handleSubmit}>
+      <a className={s.logo} href="">ImageNation III</a>
+      <form className={s.searchform} onSubmit={handleSubmit}>
         <input
           type="text"
           name="topic"
@@ -34,8 +36,8 @@ const SearchBar = ({ onSubmit }) => {
           className={s.input}
         />
         <Toaster />
-        <button className={s.button} type="submit">
-          Search
+        <button className={s.btn} type="submit">
+          <FaSearch />
         </button>
       </form>
     </header>

@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from "axios";
 import { useEffect, useState } from 'react';
 import SearchBar from "./components/SearchBar/SearchBar";
 import Loader from "./components/Loader/Loader";
@@ -7,8 +6,7 @@ import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 import ImageGallery from "./components/ImageGallery/ImageGallery";
 import LoadMoreBtn from "./components/LoadMoreBtn/LoadMoreBtn";
 import ImageModal from "./components/ImageModal/ImageModal";
-import s from './App.module.css'
-import { requestImagesByQuery } from "./services/api";
+import { requestImagesByQuery } from "./services/api"; // імпорт функції запиту з Unsplash
 
 
 function App() {
@@ -24,7 +22,7 @@ function App() {
     async function fetchImagesByQuery() {
       try {
         setIsLoading(true);
-        const data = await requestImagesByQuery(query, page);
+        const data = await requestImagesByQuery(query, page); //викликаємо запит Unsplash
         if (page === 1) {
           setImages(data.results);
         } else {
@@ -65,7 +63,7 @@ function App() {
   };
 
   return (
-    <div className={s.container}>
+    <div className="container"> 
       <SearchBar onSubmit={onSetSearchQuery} />
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
